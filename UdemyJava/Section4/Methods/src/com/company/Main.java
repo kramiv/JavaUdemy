@@ -72,3 +72,4 @@ public class Main {
 
 
 }
+//psvm shortcut creates public static void main(String[] args) {}
