@@ -1,6 +1,12 @@
 package com.company;
 
 public class Main {
+    //create a variable that can be used in multiple methods:
+    private static final String INVALID_VALUE_MESSAGE = "Invalid Value";
+    //final means it can't be changed now
+    //variables defined outside of static functions must also be defined static
+    //repeated words = make a constant
+    // repeated multiple lines of code - make a method
 
     public static void main(String[] args) {
         //call the method with 2 parameters
@@ -22,6 +28,11 @@ public class Main {
 
         output = calcFeetAndInchesToCentimeters(-100);
         System.out.println("negative value to cm " + output);//185.42
+
+        //challenge output
+        getDurationString(120,1);
+        getDurationString(60);
+        getDurationString(61,0);
 
     }
 
@@ -66,11 +77,44 @@ public class Main {
             returnValue = -1d;
         }
         return returnValue;
-
     }
 
+    //challenge
+    public static void getDurationString(int minutes, int seconds) {//he did public static String
+        if ((minutes < 0) || (seconds > 60 || seconds < 0)) {
+            System.out.println("Invalid value");//  he did return "Invalid value";
+        } else {//I made my method capable of handling 'incorrect' times (like 2 minutes and 70 seconds)
+            int totalTime = seconds + minutes*60;
+            int hours = (totalTime/60)/60;
+            totalTime = totalTime - hours*60*60;
+            minutes = totalTime/60;
+            totalTime = totalTime - minutes*60;
+            seconds = totalTime;//bonus challenge: to display a leading zero if
+            //minutes = 1 or hours = 1 or seconds = 1, then create an if-else for this sout and add it into the string.
+            System.out.println(hours + "h " + minutes + "m " + seconds + "s");
+        }
+    }
 
+    public static void getDurationString(int seconds) {
+        if (seconds > 60) {
+            System.out.println("Invalid value");
+        } else {
+            int minutes = seconds/60;
+            seconds = seconds % 60;
+            getDurationString(minutes, seconds);
+        }
+    }
 }
+
+/*
+bonus challenge solution:
+String hoursString = hours + "h";
+if (hours < 10) {
+    hoursString = "0" + hoursString;
+}
+and so on
+and then you return the strings
+*/
 
 /*
 overloading method:
