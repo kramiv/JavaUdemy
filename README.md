@@ -1,5 +1,4 @@
 # JavaUdemy
-# pausing for some time on my 1 hour goal because of finals week
 "Java Programming Masterclass covering Java 11 &amp; 17" on Udemy. Course notes and exercises
 
 Goal: complete 1 hour of video material per day. 
