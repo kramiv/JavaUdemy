@@ -3,7 +3,7 @@
 
 Goal: complete 1 hour of video material per day. 
 
-Currently prioritizing Perficient labs.
+Currently prioritizing labs.
 
 After completing a section, go over my typed notes taken during the videos (in the files) and write down new concepts by hand into my notebook.
 
